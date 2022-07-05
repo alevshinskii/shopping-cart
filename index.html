@@ -12,17 +12,82 @@
         <div class="title">
             <h1>Shopping Cart</h1>
         </div>
-        <div class="add-block">
-            
+        <div class="left-block">
+            <div class="add-block">
+                <h2>Add an Item</h2>
+                <div class="input-group">
+                    <label>ID</label>
+                    <input id="id" placeholder="ID" type="text">
+                </div>
+                <div class="input-group">
+                    <label>Name</label>
+                    <input id="name" placeholder="Name" type="text">
+                </div>
+                <div class="input-group">
+                    <label>Price</label>
+                    <input id="price" placeholder="Price" type="number">
+                </div>
+                <div class="button-block">
+                    <button onclick="addItem()">Add</button>
+                </div>
+            </div>
         </div>
         <div class="items-block">
-
+            <h2>Your Cart</h2>
+            <div class="item">
+                <div class="item-id">
+                    123
+                </div>
+                <div class="item-name">
+                    Item1
+                </div>
+                <div class="item-price">
+                    999
+                </div>
+                <div class="item-actions">
+                    <a onclick="deleteItem(123)"><div class="item-delete">
+                        <img src="components/delete.svg" alt="Delete">
+                    </div></a>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-id">
+                    124
+                </div>
+                <div class="item-name">
+                    Item2
+                </div>
+                <div class="item-price">
+                    999
+                </div>
+                <div class="item-actions">
+                    <a onclick="deleteItem(124)"><div class="item-delete">
+                        <img src="components/delete.svg" alt="Delete">
+                    </div></a>
+                </div>
+            </div>
         </div>
-        <div class="stats-block">
-
-        </div>
-        <div class="discount-block">
-
+        <div class="right-block">
+            <div class="stats-block">
+                <h2>Statistics</h2>
+                
+                <div class="stats-count">
+                    <h3>Items: </h3>
+                    <label id="stats-count">2</label>
+                </div>
+                
+                <div class="stats-price">
+                    <h3>Total Price: </h3>
+                    <label id="stats-price">1998</label>
+                </div>
+            </div>
+            <div class="discount-block">
+                <h2>Discount</h2>
+                <div class="input-group">
+                    <input type="number" id="discount" placeholder="Discount %" min="0" max="100">
+                    <button onclick="setDiscount()">Set</button>
+                </div>
+            </div>
         </div>
     </div>
 </body>
