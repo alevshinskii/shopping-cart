@@ -123,12 +123,12 @@ input {
       font-weight: 500; }
       .container .right-block .discount-block > * {
         margin-bottom: 10px; }
-      .container .right-block .discount-block .set-discount {
+      .container .right-block .discount-block .set-discount form {
         display: flex;
         justify-content: space-between; }
-        .container .right-block .discount-block .set-discount input {
+        .container .right-block .discount-block .set-discount form input {
           width: 65%; }
-        .container .right-block .discount-block .set-discount button {
+        .container .right-block .discount-block .set-discount form button {
           width: 30%; }
 
 /*# sourceMappingURL=index.css.map */

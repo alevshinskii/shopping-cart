@@ -205,15 +205,18 @@ input {
             }
 
             .set-discount{
-                display: flex;
-                justify-content: space-between;
+                form{
 
-                input{
-                    width:65%;
-                }
-
-                button{
-                    width: 30%;
+                    display: flex;
+                    justify-content: space-between;
+    
+                    input{
+                        width:65%;
+                    }
+    
+                    button{
+                        width: 30%;
+                    }
                 }
             }
         }

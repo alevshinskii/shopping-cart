@@ -1,19 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 
 
 const Discount=()=>{
 
+    const [discount,setDiscount] =useState(0);
+
+    const [current,setCurrent]=useState(discount);
 
     return(
         <div className="discount-block">
             <h3>Discount</h3>
             <div className="current-discount">
                 <span>Current: </span>
-                <span>0 %</span>
+                <span>{current} %</span>
             </div>
             <div className="set-discount">
-                <input type="number" min="0" max="100"/>
-                <button className="success-button">Set</button>
+                <form>
+                    <input type="number" min="0" max="100"  onChange={(e)=>setDiscount(e.target.value)} value={discount}/>
+                    <button className="success-button" onClick={(e)=>{e.preventDefault();setCurrent(discount);}} >Set</button>
+                </form>
             </div>
         </div>
     )
