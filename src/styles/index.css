@@ -6,7 +6,10 @@
 header {
   padding: 20px 0;
   text-align: center;
-  margin-bottom: 20px; }
+  margin-bottom: 30px;
+  border-bottom: 1px solid lightgray;
+  background-color: rgba(231, 241, 206, 0.479);
+  box-shadow: 1px 1px 7px; }
   header h1 {
     font-size: 40px;
     font-weight: 700; }
@@ -62,7 +65,8 @@ input {
     .container .center-block .list-block {
       border: 1px solid gray;
       padding: 15px 15px;
-      border-radius: 3px; }
+      border-radius: 3px;
+      background-color: rgba(231, 241, 206, 0.479); }
       .container .center-block .list-block > * {
         margin-bottom: 10px; }
       .container .center-block .list-block h3 {
@@ -74,15 +78,16 @@ input {
         justify-content: space-between;
         font-size: 20px;
         font-weight: 500;
-        text-align: center; }
+        text-align: center;
+        border-bottom: 1px solid gray; }
         .container .center-block .list-block .item .item-id {
           width: 10%; }
         .container .center-block .list-block .item .item-name {
-          width: 60%; }
+          width: 50%; }
         .container .center-block .list-block .item .item-price {
-          width: 20%; }
+          width: 30%; }
         .container .center-block .list-block .item .item-actions {
-          width: 8%; }
+          width: 10%; }
           .container .center-block .list-block .item .item-actions a {
             width: 100%;
             height: auto;

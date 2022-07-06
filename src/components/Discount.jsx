@@ -12,7 +12,7 @@ const Discount=()=>{
                 <span>0 %</span>
             </div>
             <div className="set-discount">
-                <input/>
+                <input type="number" min="0" max="100"/>
                 <button>Set</button>
             </div>
         </div>

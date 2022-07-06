@@ -13,11 +13,15 @@ function App() {
   ])
 
 
+  function addItem(item){
+    setItems([...items,item]);
+  }
+
   return (
     <div className='container'>
       <div className='left-block'>
         
-        <AddItem/>
+        <AddItem add={addItem}/>
       </div>
       <div className='center-block'>
         <ListItems items={items}/>
