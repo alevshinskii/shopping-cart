@@ -1,6 +1,8 @@
 import React,{useState} from "react";
 import AddItem from './components/AddItem';
-import ListItems from './components/ListItems'
+import ListItems from './components/ListItems';
+import Stats from './components/Stats';
+import Discount from './components/Discount';
 
 function App() {
 
@@ -21,7 +23,8 @@ function App() {
         <ListItems items={items}/>
       </div>
       <div className='right-block'>
-        Правый блок
+        <Stats/>
+        <Discount/>
       </div>
     </div>
   );

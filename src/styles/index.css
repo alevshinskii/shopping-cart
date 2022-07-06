@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap");
 * {
-  font-family: 'Open-Sans', sans-serif;
+  font-family: "Open-Sans", sans-serif;
   font-style: normal; }
 
 header {
@@ -10,6 +10,33 @@ header {
   header h1 {
     font-size: 40px;
     font-weight: 700; }
+
+h3 {
+  font-size: 2rem;
+  font-weight: 600; }
+
+label {
+  font-size: 1.5rem;
+  font-weight: 500; }
+
+button {
+  padding: 10px 0;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  background-color: lightgreen;
+  font-size: 20px;
+  font-weight: 500; }
+  button:hover {
+    background-color: green;
+    color: white; }
+
+input {
+  padding: 10px 10px;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: 500;
+  width: 100%; }
 
 .container {
   margin-left: 10%;
@@ -28,29 +55,8 @@ header {
       align-items: flex-start; }
       .container .left-block .add-block > * {
         margin-bottom: 10px; }
-      .container .left-block .add-block h3 {
-        font-size: 2rem;
-        font-weight: 600; }
-      .container .left-block .add-block label {
-        font-size: 1.5rem;
-        font-weight: 500; }
       .container .left-block .add-block button {
-        padding: 10px 30px;
-        border: 1px solid lightgray;
-        border-radius: 5px;
-        background-color: lightgreen;
-        font-size: 20px;
-        font-weight: 500; }
-        .container .left-block .add-block button:hover {
-          background-color: green;
-          color: white; }
-      .container .left-block .add-block input {
-        padding: 10px 10px;
-        border: 1px solid lightgray;
-        border-radius: 5px;
-        font-size: 20px;
-        font-weight: 500;
-        width: 100%; }
+        padding: 10px 30px; }
   .container .center-block {
     width: 45%; }
     .container .center-block .list-block {
@@ -88,5 +94,35 @@ header {
                 filter: invert(40%) sepia(58%) saturate(4303%) hue-rotate(340deg) brightness(93%) contrast(114%); }
   .container .right-block {
     width: 25%; }
+    .container .right-block .stats-block {
+      border: 1px solid gray;
+      padding: 15px 15px;
+      border-radius: 3px;
+      margin-bottom: 20px;
+      background-color: rgba(231, 241, 206, 0.479);
+      display: flex;
+      flex-direction: column;
+      font-size: 1.5rem;
+      font-weight: 500; }
+      .container .right-block .stats-block > * {
+        margin-bottom: 10px; }
+    .container .right-block .discount-block {
+      border: 1px solid gray;
+      padding: 15px 15px;
+      border-radius: 3px;
+      background-color: rgba(231, 241, 206, 0.479);
+      display: flex;
+      flex-direction: column;
+      font-size: 1.5rem;
+      font-weight: 500; }
+      .container .right-block .discount-block > * {
+        margin-bottom: 10px; }
+      .container .right-block .discount-block .set-discount {
+        display: flex;
+        justify-content: space-between; }
+        .container .right-block .discount-block .set-discount input {
+          width: 65%; }
+        .container .right-block .discount-block .set-discount button {
+          width: 30%; }
 
 /*# sourceMappingURL=index.css.map */
