@@ -35,7 +35,7 @@ label {
 
 
 
-button {
+.success-button {
     padding: 10px 0;
     border: 1px solid lightgray;
     border-radius: 5px;
@@ -72,21 +72,24 @@ input {
         width: 25%;
 
         .add-block {
-            border: 1px solid gray;
-            padding: 15px 15px;
-            border-radius: 3px;
+            form{
 
-            background-color: rgba(231, 241, 206, 0.479);
-
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            & > * {
-                margin-bottom: 10px;
-            }
-
-            button{
-                padding: 10px 30px;
+                border: 1px solid gray;
+                padding: 15px 15px;
+                border-radius: 3px;
+    
+                background-color: rgba(231, 241, 206, 0.479);
+    
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                & > * {
+                    margin-bottom: 10px;
+                }
+    
+                .success-button{
+                    padding: 10px 30px;
+                }
             }
 
         }
@@ -139,7 +142,8 @@ input {
 
                 .item-actions {
                     width: 10%;
-                    a {
+                    button {
+                        background-color: transparent;
                         width: 100%;
                         height: auto;
                         cursor: pointer;

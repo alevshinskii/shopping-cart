@@ -18,7 +18,7 @@ function App() {
   }
 
   function removeItem(item){
-    setItems(items.filter(i=>i.id!=item.id));
+    setItems(items.filter(i=>i.id!==item.id));
   }
 
   return (
@@ -31,7 +31,7 @@ function App() {
         <ListItems items={items} remove={removeItem}/>
       </div>
       <div className='right-block'>
-        <Stats/>
+        <Stats items={items}/>
         <Discount/>
       </div>
     </div>

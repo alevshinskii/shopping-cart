@@ -1,19 +1,18 @@
 import React from "react";
 
 
-const Stats=()=>{
-
+const Stats=({items})=>{
 
     return(
         <div className="stats-block">
             <h3>Statistics</h3>
             <div className="total-items">
                 <span>Items: </span>
-                <span>2</span>
+                <span>{items.length}</span>
             </div>
             <div className="total-price">
                 <span>Price: </span>
-                <span>2000</span>
+                <span>{items.reduce((partialSum, item) => partialSum + +item.price, 0)}</span>
             </div>
         </div>
     )

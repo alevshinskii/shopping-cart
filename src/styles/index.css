@@ -22,14 +22,14 @@ label {
   font-size: 1.5rem;
   font-weight: 500; }
 
-button {
+.success-button {
   padding: 10px 0;
   border: 1px solid lightgray;
   border-radius: 5px;
   background-color: lightgreen;
   font-size: 20px;
   font-weight: 500; }
-  button:hover {
+  .success-button:hover {
     background-color: green;
     color: white; }
 
@@ -48,7 +48,7 @@ input {
   justify-content: space-between; }
   .container .left-block {
     width: 25%; }
-    .container .left-block .add-block {
+    .container .left-block .add-block form {
       border: 1px solid gray;
       padding: 15px 15px;
       border-radius: 3px;
@@ -56,9 +56,9 @@ input {
       display: flex;
       flex-direction: column;
       align-items: flex-start; }
-      .container .left-block .add-block > * {
+      .container .left-block .add-block form > * {
         margin-bottom: 10px; }
-      .container .left-block .add-block button {
+      .container .left-block .add-block form .success-button {
         padding: 10px 30px; }
   .container .center-block {
     width: 45%; }
@@ -88,14 +88,15 @@ input {
           width: 30%; }
         .container .center-block .list-block .item .item-actions {
           width: 10%; }
-          .container .center-block .list-block .item .item-actions a {
+          .container .center-block .list-block .item .item-actions button {
+            background-color: transparent;
             width: 100%;
             height: auto;
             cursor: pointer; }
-            .container .center-block .list-block .item .item-actions a img {
+            .container .center-block .list-block .item .item-actions button img {
               width: 40px;
               height: auto; }
-              .container .center-block .list-block .item .item-actions a img:hover {
+              .container .center-block .list-block .item .item-actions button img:hover {
                 filter: invert(40%) sepia(58%) saturate(4303%) hue-rotate(340deg) brightness(93%) contrast(114%); }
   .container .right-block {
     width: 25%; }

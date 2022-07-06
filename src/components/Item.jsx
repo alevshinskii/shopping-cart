@@ -20,9 +20,9 @@ const Item = ({item, remove}) => {
                 {item.price}
             </div>
             <div className="item-actions">
-                <a onClick={()=>removeItem(item)}>
+                <button onClick={(e)=>removeItem(item)}>
                     <img src="./images/delete.svg" alt="Delete"/>
-                </a>
+                </button>
             </div>
         </div>
     )
