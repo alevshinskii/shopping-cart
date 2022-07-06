@@ -19,6 +19,10 @@ header {
   .container .left-block {
     width: 25%; }
     .container .left-block .add-block {
+      border: 1px solid gray;
+      padding: 15px 15px;
+      border-radius: 3px;
+      background-color: rgba(231, 241, 206, 0.479);
       display: flex;
       flex-direction: column;
       align-items: flex-start; }
@@ -31,22 +35,58 @@ header {
         font-size: 1.5rem;
         font-weight: 500; }
       .container .left-block .add-block button {
-        padding: 10px 10px;
-        border: 1px solid black;
+        padding: 10px 30px;
+        border: 1px solid lightgray;
         border-radius: 5px;
-        background-color: beige;
+        background-color: lightgreen;
         font-size: 20px;
         font-weight: 500; }
+        .container .left-block .add-block button:hover {
+          background-color: green;
+          color: white; }
       .container .left-block .add-block input {
         padding: 10px 10px;
-        border: 1px solid black;
+        border: 1px solid lightgray;
         border-radius: 5px;
         font-size: 20px;
         font-weight: 500;
         width: 100%; }
-  .container .right-block {
-    width: 25%; }
   .container .center-block {
     width: 45%; }
+    .container .center-block .list-block {
+      border: 1px solid gray;
+      padding: 15px 15px;
+      border-radius: 3px; }
+      .container .center-block .list-block > * {
+        margin-bottom: 10px; }
+      .container .center-block .list-block h3 {
+        font-size: 2rem;
+        font-weight: 600; }
+      .container .center-block .list-block .item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 20px;
+        font-weight: 500;
+        text-align: center; }
+        .container .center-block .list-block .item .item-id {
+          width: 10%; }
+        .container .center-block .list-block .item .item-name {
+          width: 60%; }
+        .container .center-block .list-block .item .item-price {
+          width: 20%; }
+        .container .center-block .list-block .item .item-actions {
+          width: 8%; }
+          .container .center-block .list-block .item .item-actions a {
+            width: 100%;
+            height: auto;
+            cursor: pointer; }
+            .container .center-block .list-block .item .item-actions a img {
+              width: 40px;
+              height: auto; }
+              .container .center-block .list-block .item .item-actions a img:hover {
+                filter: invert(40%) sepia(58%) saturate(4303%) hue-rotate(340deg) brightness(93%) contrast(114%); }
+  .container .right-block {
+    width: 25%; }
 
 /*# sourceMappingURL=index.css.map */
