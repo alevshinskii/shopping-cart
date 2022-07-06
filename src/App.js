@@ -17,6 +17,10 @@ function App() {
     setItems([...items,item]);
   }
 
+  function removeItem(item){
+    setItems(items.filter(i=>i.id!=item.id));
+  }
+
   return (
     <div className='container'>
       <div className='left-block'>
@@ -24,7 +28,7 @@ function App() {
         <AddItem add={addItem}/>
       </div>
       <div className='center-block'>
-        <ListItems items={items}/>
+        <ListItems items={items} remove={removeItem}/>
       </div>
       <div className='right-block'>
         <Stats/>

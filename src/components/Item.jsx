@@ -1,10 +1,11 @@
 import React from "react";
 
 
-const Item = ({item}) => {
+const Item = ({item, remove}) => {
 
-    function deleteItem(){
-        
+    function removeItem(item){
+        console.log(item);
+        remove(item);
     }
 
     return(
@@ -19,7 +20,7 @@ const Item = ({item}) => {
                 {item.price}
             </div>
             <div className="item-actions">
-                <a onClick={deleteItem(item.id)}>
+                <a onClick={()=>removeItem(item)}>
                     <img src="./images/delete.svg" alt="Delete"/>
                 </a>
             </div>
