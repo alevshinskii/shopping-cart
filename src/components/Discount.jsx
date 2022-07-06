@@ -11,8 +11,11 @@ const Discount=()=>{
         <div className="discount-block">
             <h3>Discount</h3>
             <div className="current-discount">
-                <span>Current: </span>
-                <span>{current} %</span>
+                <div className="text">
+                    <span>Current: </span>
+                    <span> {current} %</span>
+                </div>
+                <button className="danger-button" onClick={(e)=>{e.preventDefault(); setCurrent(0); setDiscount(0);}} >Reset</button>
             </div>
             <div className="set-discount">
                 <form>

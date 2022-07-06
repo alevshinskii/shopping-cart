@@ -50,6 +50,21 @@ label {
     }
 }
 
+.danger-button {
+    padding: 10px 0;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    background-color: lightcoral;
+
+    font-size: 20px;
+    font-weight: 500;
+
+    &:hover {
+        background-color: red;
+        color: white;
+    }
+}
+
 input {
     padding: 10px 10px;
     border: 1px solid lightgray;
@@ -142,6 +157,8 @@ input {
 
                 .item-actions {
                     width: 10%;
+                    display: flex;
+                    align-items: center;
                     button {
                         background-color: transparent;
                         width: 100%;
@@ -159,6 +176,12 @@ input {
                             }
                         }
                     }
+                }
+            }
+            .title{
+                font-weight: 600;
+                .item-actions{
+                    visibility: hidden;
                 }
             }
         }
@@ -203,6 +226,22 @@ input {
             & > * {
                 margin-bottom: 10px;
             }
+
+            .current-discount{
+                display: flex;
+                    justify-content: space-between;
+    
+                    .text{
+                        display: flex;
+                        align-items: center;
+                        width:65%;
+                    }
+    
+                    button{
+                        width: 30%;
+                    }
+            }
+
 
             .set-discount{
                 form{

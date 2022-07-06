@@ -33,6 +33,17 @@ label {
     background-color: green;
     color: white; }
 
+.danger-button {
+  padding: 10px 0;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  background-color: lightcoral;
+  font-size: 20px;
+  font-weight: 500; }
+  .danger-button:hover {
+    background-color: red;
+    color: white; }
+
 input {
   padding: 10px 10px;
   border: 1px solid lightgray;
@@ -87,7 +98,9 @@ input {
         .container .center-block .list-block .item .item-price {
           width: 30%; }
         .container .center-block .list-block .item .item-actions {
-          width: 10%; }
+          width: 10%;
+          display: flex;
+          align-items: center; }
           .container .center-block .list-block .item .item-actions button {
             background-color: transparent;
             width: 100%;
@@ -98,6 +111,10 @@ input {
               height: auto; }
               .container .center-block .list-block .item .item-actions button img:hover {
                 filter: invert(40%) sepia(58%) saturate(4303%) hue-rotate(340deg) brightness(93%) contrast(114%); }
+      .container .center-block .list-block .title {
+        font-weight: 600; }
+        .container .center-block .list-block .title .item-actions {
+          visibility: hidden; }
   .container .right-block {
     width: 25%; }
     .container .right-block .stats-block {
@@ -123,6 +140,15 @@ input {
       font-weight: 500; }
       .container .right-block .discount-block > * {
         margin-bottom: 10px; }
+      .container .right-block .discount-block .current-discount {
+        display: flex;
+        justify-content: space-between; }
+        .container .right-block .discount-block .current-discount .text {
+          display: flex;
+          align-items: center;
+          width: 65%; }
+        .container .right-block .discount-block .current-discount button {
+          width: 30%; }
       .container .right-block .discount-block .set-discount form {
         display: flex;
         justify-content: space-between; }
