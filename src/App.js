@@ -1,8 +1,19 @@
-import './App.css';
+import AddItem from './components/AddItem';
 
 function App() {
   return (
-    <h1>Hello world</h1>
+    <div className='container'>
+      <div className='left-block'>
+        
+        <AddItem/>
+      </div>
+      <div className='center-block'>
+        Центральный блок
+      </div>
+      <div className='right-block'>
+        Правый блок
+      </div>
+    </div>
   );
 }
 
