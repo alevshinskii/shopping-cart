@@ -23,7 +23,7 @@ const Item = ({item, remove}) => {
                             <span style={{textDecoration:"line-through", color:"gray", marginRight:"5px"}}>{item.price}</span>
                         </div>
                         <div>
-                            <span style={{color:"red"}}>{item.newPrice}</span>
+                            <span style={{color:"red"}}>{+item.newPrice.toFixed(2)}</span>
                         </div>
                     </div>
                           : 

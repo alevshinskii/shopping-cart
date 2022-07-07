@@ -16,7 +16,7 @@ const Stats=({items,discount})=>{
                     discount>0 ?
                     <div>
                         <span style={{textDecoration:"line-through", color:"gray", marginRight:"5px"}}>{items.reduce((partialSum, item) => partialSum + +item.price, 0)}</span>
-                        <span style={{color:"red"}}>{items.reduce((partialSum, item) => partialSum + +(item.newPrice ? item.newPrice : item.price), 0)}</span>
+                        <span style={{color:"red"}}>{+items.reduce((partialSum, item) => partialSum + +(item.newPrice ? item.newPrice : item.price), 0).toFixed(2)}</span>
                     </div> 
                     :
                     <div>

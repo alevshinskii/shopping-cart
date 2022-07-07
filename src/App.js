@@ -9,7 +9,8 @@ function App() {
 
   const [items,setItems] = useState([
     {id:"1",name:"Item1",price:1000},
-    {id:"2",name:"Item2",price:10123}
+    {id:"2",name:"Item2",price:2000},
+    {id:"3",name:"Item3",price:3000}
   ])
 
   
@@ -27,7 +28,7 @@ function App() {
   }
 
   function removeItem(item){
-    setItems(items.filter(i=>(i.id!=item.id && i.name!=item.name)));
+    setItems(items.filter(i=>(i.id!==item.id || i.name!==item.name)));
   }
 
   return (
