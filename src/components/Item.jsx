@@ -1,10 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 
 
 const Item = ({item, remove}) => {
 
     function removeItem(item){
-        console.log(item);
         remove(item);
     }
 
@@ -17,7 +16,19 @@ const Item = ({item, remove}) => {
                 {item.name}
             </div>
             <div className="item-price">
-                {item.price}
+                {
+                    item.newPrice < item.price ? 
+                    <div>
+                        <div>
+                            <span style={{textDecoration:"line-through", color:"gray", marginRight:"5px"}}>{item.price}</span>
+                        </div>
+                        <div>
+                            <span style={{color:"red"}}>{item.newPrice}</span>
+                        </div>
+                    </div>
+                          : 
+                    <span>{item.price}</span>
+                }
             </div>
             <div className="item-actions">
                 <button onClick={(e)=>removeItem(item)}>

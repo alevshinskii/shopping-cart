@@ -8,31 +8,39 @@ function App() {
 
 
   const [items,setItems] = useState([
-    {id:1,name:"Item1",price:1000},
-    {id:2,name:"Item2",price:10123}
+    {id:"1",name:"Item1",price:1000},
+    {id:"2",name:"Item2",price:10123}
   ])
 
+  
+  const [discount,setDiscount]=useState(0);
+
+  function applyDiscount(discountToSet){
+    setDiscount(discountToSet);
+    setItems(items.map((i)=> {return {...i,newPrice: (i.price*(100-discountToSet)/100)}}));
+  }
 
   function addItem(item){
+    item = {...item,newPrice: (item.price*(100-discount)/100)};
     setItems([...items,item]);
+
   }
 
   function removeItem(item){
-    setItems(items.filter(i=>i.id!==item.id));
+    setItems(items.filter(i=>(i.id!=item.id && i.name!=item.name)));
   }
 
   return (
     <div className='container'>
       <div className='left-block'>
-        
         <AddItem add={addItem}/>
       </div>
       <div className='center-block'>
         <ListItems items={items} remove={removeItem}/>
       </div>
       <div className='right-block'>
-        <Stats items={items}/>
-        <Discount/>
+        <Stats items={items} discount={discount}/>
+        <Discount current={discount} set={applyDiscount}/>
       </div>
     </div>
   );
