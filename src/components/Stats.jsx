@@ -11,7 +11,7 @@ const Stats=({items,discount})=>{
                 <span>{items.length}</span>
             </div>
             <div className="total-price">
-                <span style={{marginRight:"5px"}}>Price: </span>
+                <span style={{marginRight:"5px"}}>Total price: </span>
                 {
                     discount>0 ?
                     <div>

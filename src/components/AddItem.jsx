@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 
-const AddItem = function ({ add }) {
+const AddItem = function ({ add, items }) {
     const [item, setItem] = useState({ id: "", name: "", price: 0 });
 
     function addItem(e) {
         e.preventDefault();
-        if (item.id && item.name && item.price) {
+        if (item.id && item.name && item.price && !items.find(i=> +i.id === +item.id)) {
             add(item);
 
             setItem({ id: "", name: "", price: 0 });
@@ -18,9 +18,10 @@ const AddItem = function ({ add }) {
                 <h3>Add an Item</h3>
                 <label>ID</label>
                 <input
-                    type="text"
+                    type="number"
                     value={item.id}
                     onChange={(e) => setItem({ ...item, id: e.target.value })}
+                    min="1"
                 />
                 <label>Name</label>
                 <input

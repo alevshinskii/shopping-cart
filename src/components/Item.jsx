@@ -18,7 +18,7 @@ const Item = ({item, remove}) => {
             <div className="item-price">
                 {
                     item.newPrice < item.price ? 
-                    <div>
+                    <div style={{display:"flex"}}>
                         <div>
                             <span style={{textDecoration:"line-through", color:"gray", marginRight:"5px"}}>{item.price}</span>
                         </div>

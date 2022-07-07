@@ -8,9 +8,9 @@ function App() {
 
 
   const [items,setItems] = useState([
-    {id:"1",name:"Item1",price:1000},
-    {id:"2",name:"Item2",price:2000},
-    {id:"3",name:"Item3",price:3000}
+    {id:1,name:"Item1",price:1000},
+    {id:2,name:"Item2",price:2000},
+    {id:3,name:"Item3",price:3000}
   ])
 
   
@@ -23,8 +23,8 @@ function App() {
 
   function addItem(item){
     item = {...item,newPrice: (item.price*(100-discount)/100)};
-    setItems([...items,item]);
 
+    setItems([...items,item]);
   }
 
   function removeItem(item){
@@ -34,7 +34,7 @@ function App() {
   return (
     <div className='container'>
       <div className='left-block'>
-        <AddItem add={addItem}/>
+        <AddItem add={addItem} items={items}/>
       </div>
       <div className='center-block'>
         <ListItems items={items} remove={removeItem}/>
